@@ -1,0 +1,35 @@
+<div class="app-board">
+<div class="card ui-md-12">
+  <div class="card-body">
+    <div class="ui-md-4 card-img">
+      <div class="rounded-img ">
+        <img src="{{data.owner['avatar_url']}}" alt="Avatar">
+      </div>
+    </div>
+    <h2 align="center">{{data.name}}</h2>
+
+    <div class="ui-md-12 center-text">
+      <ul class="icon-buttons">
+        <li><span class="rounded-rectangle-card"> <i class="fa fa-star fa-icons-style"
+                                                     aria-hidden="true"> {{data.stargazers_count}}</i></span>
+        </li>
+        <li><span class="rounded-rectangle-card"> <i class="fa fa-code-fork fa-icons-style"
+                                                     aria-hidden="true"> Fork: {{data.forks}}</i></span>
+        </li>
+        <li><span class="rounded-rectangle-card"> <i class="fa fa-exclamation fa-icons-style"
+                                                     aria-hidden="true"> Open Issues: {{data.open_issues}}</i></span>
+        </li>
+      </ul>
+    <p class="block-with-text">{{data.description}}</p>
+
+    </div>
+  </div>
+  <div class="card-separate">
+  </div>
+  <div class="card-button center-text">
+    <a href="{{data.html_url}}" target="_blank" class="view-button">VIEW PROFILE</a>
+  </div>
+</div>
+</div>
+
+

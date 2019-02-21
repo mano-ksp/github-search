@@ -1,0 +1,22 @@
+<div class="container dashboard-container">
+  <div class="search-header"><h3>Git Repo Search Filter</h3></div>
+  <label>
+    <input class="search-input" type="text" [(ngModel)]="queryString" name="SearchQuery"/>
+  </label>
+  <button class="search-button" (click)="getSearchResults()">Search</button>
+</div>
+<span style="padding: 10px"></span>
+<div class="container dashboard-container">
+  <div class="search-header">
+    <h3>Repo Search Result</h3>
+  </div>
+  <div class="display-inline app-container">
+    <app-board *ngFor="let board of boards" [data]="board" class="ui-md-4"></app-board>
+  </div>
+  <hr>
+  <div class="center-text display-inline">
+    <ul class="pagination" *ngFor="let page of pages; index  as i;">
+      <li class="pagination-no noselect" (click)="setNextPage(i)"><a>{{i + 1}}</a></li>
+    </ul>
+  </div>
+</div>
